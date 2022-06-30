@@ -1,12 +1,9 @@
 import time
-import traceback
 import datetime
 from pathlib import Path
 from typing import Optional
-#https://medium.com/coinmonks/defi-protocol-data-how-to-query-618c934dbbe2
 import requests
 from concurrent.futures import ThreadPoolExecutor
-from pandas.core.dtypes.generic import ABCSeries
 import filecache
 from globals import *
 from utils import *
@@ -23,9 +20,6 @@ _transport = RequestsHTTPTransport(
     url= BASE_URL,
     use_json=True
 )
-
-RAY = 10**27
-SECONDS_PER_YEAR = 31536000
 
 class Aave:
     #Aave class to act as Aave's API Client
